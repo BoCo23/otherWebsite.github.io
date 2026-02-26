@@ -1,0 +1,117 @@
+<html>
+    <head>      <!Starting header>
+        <title>Sailing - Yardstick</title>      <!setting the title for the tap>
+        <link rel="stylesheet" href="style.css">        <!loading the CSS>
+        <link rel="icon" type="image/x-icon" href="images/misc/icon.png">       <!adding website icon>
+        <script src="Sailing javascript.js"></script>       <!linking Javascript>
+    </head><!ending header>
+    <body><!Starting the main body of the website>
+         <nav><!making a navigation bar>
+              <a href="./Sailing - Home.html" class="nav">Home</a>
+              <a href="./Sailing - Famous People.html" class="nav">Famous People</a>
+              <a href="./Sailing - Yardstick.html" class="nav">Yardstick</a>
+        </nav>
+        <h1>Yardstick</h1>      <!Title>
+        <p>Yardstick is a number that is assigned to most boats by the RYA (Royal Yachting Assosiation). It is a number that is used to adjust the finish times of boats in a race so that different types of boats can race against each other and the race be based off the helms skill not the type of boat they are in. <br><br>The numbers range from: <br>670 - Class name: Formula 18<br>up to 1635 - Class name: Optimist.<br><br>The Adjusted time is calculated by:</p>
+        <ol>        <!making an ordered list>
+            <li>Divide elapsed itme by the boats yardstick</li>
+            <li>Multiplying the result by 1000</li>
+            <li>Ordering adjusted times.</li>
+        </ol>
+        <div class="row">       <!making two columbs>
+            <div class="column">
+            <input id="search_bar" onkeyup="get_yardstick()" type="text" name="search" placeholder="Search Yardstick by boat:" autocomplete="off">      <!adding search bar>
+            <nav>
+                <ul id="yardsticks">        <!makling an unordered list all with class boat so they can be filtered>
+                    <li class="boat">420 - <span class="yardstick_number">1100</span></li>
+                    <li class="boat">2000 - <span class="yardstick_number">1114</span></li>
+                    <li class="boat">29ER - <span class="yardstick_number">897</span></li>
+                    <li class="boat">505 - <span class="yardstick_number">900</span></li>
+                    <li class="boat">Albacore - <span class="yardstick_number">1037</span></li>
+                    <li class="boat">Alto - <span class="yardstick_number">921</span></li>
+                    <li class="boat">B14 - <span class="yardstick_number">858</span></li>
+                    <li class="boat">Blaze - <span class="yardstick_number">1033</span></li>
+                    <li class="boat">British Moth - <span class="yardstick_number">1165</span></li>
+                    <li class="boat">Byte CII - <span class="yardstick_number">1135</span></li>
+                    <li class="boat">Comet - <span class="yardstick_number">1210</span></li>
+                    <li class="boat">Comet Trio (Mk I) - <span class="yardstick_number">1096</span></li>
+                    <li class="boat">Comet Trio (Mk II) - <span class="yardstick_number">1052</span></li>
+                    <li class="boat">Contender - <span class="yardstick_number">969</span></li>
+                    <li class="boat">Devoti D-one - <span class="yardstick_number">948</span></li>
+                    <li class="boat">Devoti D-zero - <span class="yardstick_number">1029</span></li>
+                    <li class="boat">Enterprise - <span class="yardstick_number">1126</span></li>
+                    <li class="boat">Europe - <span class="yardstick_number">1141</span></li>
+                    <li class="boat">Finn - <span class="yardstick_number">1149</span></li>
+                    <li class="boat">Fireball - <span class="yardstick_number">952</span></li>
+                    <li class="boat">Firefly - <span class="yardstick_number">1174</span></li>
+                    <li class="boat">Flying Fifteen - <span class="yardstick_number">1021</span></li>
+                    <li class="boat">GP14 - <span class="yardstick_number">1133</span></li>
+                    <li class="boat">Graduate - <span class="yardstick_number">1120</span></li>
+                    <li class="boat">Hadron H2 - <span class="yardstick_number">1038</span></li>
+                    <li class="boat">Hornet - <span class="yardstick_number">959</span></li>
+                    <li class="boat">Icon - <span class="yardstick_number">976</span></li>
+                    <li class="boat">Laser 4.7 - <span class="yardstick_number">1210</span></li>
+                    <li class="boat">Laser Radial - <span class="yardstick_number">1150</span></li>
+                    <li class="boat">Laser 1 - <span class="yardstick_number">1101</span></li>
+                    <li class="boat">K1 - <span class="yardstick_number">1070</span></li>
+                    <li class="boat">K6 - <span class="yardstick_number">919</span></li>
+                    <li class="boat">Kestrel - <span class="yardstick_number">1038</span></li>
+                    <li class="boat">Lark - <span class="yardstick_number">1065</span></li>
+                    <li class="boat">Lightning 368 - <span class="yardstick_number">1160</span></li>
+                    <li class="boat">Megabyte - <span class="yardstick_number">1072</span></li>
+                    <li class="boat">Merlin-rocket - <span class="yardstick_number">98</span></li>
+                    <li class="boat">Miracle - <span class="yardstick_number">1194</span></li>
+                    <li class="boat">Mirror (D/h) - <span class="yardstick_number">1387</span></li>
+                    <li class="boat">Mirror (S/h) - <span class="yardstick_number">1377</span></li>
+                    <li class="boat">Musto Skiff - <span class="yardstick_number">845</span></li>
+                    <li class="boat">National 12 - <span class="yardstick_number">1064</span></li>
+                    <li class="boat">Ok - <span class="yardstick_number">1104</span></li>
+                    <li class="boat">Optimist - <span class="yardstick_number">1635</span></li>
+                    <li class="boat">Osprey - <span class="yardstick_number">934</span></li>
+                    <li class="boat">Phantom - <span class="yardstick_number">1002</span></li>
+                    <li class="boat">Rooster 8.1 - <span class="yardstick_number">1035</span></li>
+                    <li class="boat">RS 100 8.4 - <span class="yardstick_number">1002</span></li>
+                    <li class="boat">RS 200 - <span class="yardstick_number">1046</span></li>
+                    <li class="boat">RS 300 - <span class="yardstick_number">965</span></li>
+                    <li class="boat">RS 400 - <span class="yardstick_number">940</span></li>
+                    <li class="boat">RS 500 - <span class="yardstick_number">966</span></li>
+                    <li class="boat">RS 600 - <span class="yardstick_number">920</span></li>
+                    <li class="boat">RS 700 - <span class="yardstick_number">845</span></li>
+                    <li class="boat">RS 800 - <span class="yardstick_number">799</span></li>
+                    <li class="boat">RS Aero 5 - <span class="yardstick_number">1136</span></li>
+                    <li class="boat">RS Aero 7 - <span class="yardstick_number">1063</span></li>
+                    <li class="boat">RS Aero 9 - <span class="yardstick_number">1010</span></li>
+                    <li class="boat">RS Feva Xl - <span class="yardstick_number">1248</span></li>
+                    <li class="boat">RS Tera Pro - <span class="yardstick_number">1364</span></li>
+                    <li class="boat">RS Tera Sport - <span class="yardstick_number">1445</span></li>
+                    <li class="boat">RS Vareo - <span class="yardstick_number">1093</span></li>
+                    <li class="boat">RS Vision - <span class="yardstick_number">1137</span></li>
+                    <li class="boat">Scorpion - <span class="yardstick_number">1043</span></li>
+                    <li class="boat">Seafly - <span class="yardstick_number">1071</span></li>
+                    <li class="boat">Solo - <span class="yardstick_number">1142</span></li>
+                    <li class="boat">Solution - <span class="yardstick_number">1096</span></li>
+                    <li class="boat">Streaker - <span class="yardstick_number">1128</span></li>
+                    <li class="boat">Supernova - <span class="yardstick_number">1077</span></li>
+                    <li class="boat">Tasar - <span class="yardstick_number">1017</span></li>
+                    <li class="boat">Topper - <span class="yardstick_number">1369</span></li>
+                    <li class="boat">Wanderer - <span class="yardstick_number">1193</span></li>
+                    <li class="boat">Wayfarer - <span class="yardstick_number">1105</span></li>
+                </ul>
+            </nav>
+            </div>
+            
+            <!Yardstick Calc>
+            
+            <div class="column">        <!Adding second columb>
+                <h2>Yardstick Demonstration:</h2>
+                <input class="yardstick_inputs" id="Yardstick_Adjuster_input" onchange="Adjust_time()" onkeyup="Adjust_time()" type="number" name="Yardstick_Adjuster_input" min="1" autocomplete="off" placeholder="Enter Yardstick:">      <!making yardstick input box>
+                <br><br>        <!new line>
+                <!adding inputs for time>
+                <input class="yardstick_inputs" id="Yardstick_Adjuster_input_time_minutes" onchange="Adjust_time()" onkeyup="Adjust_time()" type="number" name="Yardstick_Adjuster_input_time_minutes" autocomplete="off" placeholder="Enter Minutes:">
+                <input class="yardstick_inputs" id="Yardstick_Adjuster_input_time_seconds" onchange="Adjust_time()" onkeyup="Adjust_time()" type="number" name="Yardstick_Adjuster_input_time_seconds" autocomplete="off" placeholder="Enter Seconds:">
+                <br><br>
+                <input class="yardstick_inputs" id="Adjusted_time" placeholder="Adjusted Time:">        <!adding box for output>
+            </div>
+        </div>
+    </body>
+</html>
